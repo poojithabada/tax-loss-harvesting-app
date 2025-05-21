@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/tax-loss-harvesting-app/static/css/main.fc82e9aa.css",
+    "main.js": "/tax-loss-harvesting-app/static/js/main.4c73f3ce.js",
+    "static/media/fa-solid-900.ttf": "/tax-loss-harvesting-app/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/tax-loss-harvesting-app/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/tax-loss-harvesting-app/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/tax-loss-harvesting-app/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/tax-loss-harvesting-app/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/tax-loss-harvesting-app/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/tax-loss-harvesting-app/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/tax-loss-harvesting-app/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/tax-loss-harvesting-app/index.html",
+    "main.fc82e9aa.css.map": "/tax-loss-harvesting-app/static/css/main.fc82e9aa.css.map",
+    "main.4c73f3ce.js.map": "/tax-loss-harvesting-app/static/js/main.4c73f3ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc82e9aa.css",
+    "static/js/main.4c73f3ce.js"
+  ]
+}
