@@ -17,8 +17,8 @@ const Dashboard = () => {
   };
 
   const calculateGains = () => {
-    let shortTermProfits = 0,
-      shortTermLosses = 0,
+    let shortTermProfits = 4049.48,
+      shortTermLosses = 32127.03,
       longTermProfits = 0,
       longTermLosses = 0;
 
