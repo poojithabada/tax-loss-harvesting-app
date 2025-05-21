@@ -215,69 +215,69 @@ const defaultData = [
             <th>Amount to Sell</th>
           </tr>
         </thead>
-        <tbody>
-          {visibleData.map((h) => {
-            const shortTermValue = (h.currentPrice - h.avgBuyPrice) * h.shortTerm;
-            const shortTermClass = shortTermValue < 0 ? 'red' : 'green';
+   <tbody>
+  {visibleData.map((h) => {
+    const shortTermValue = (h.currentPrice - h.avgBuyPrice) * h.shortTerm;
+    const shortTermClass = shortTermValue < 0 ? 'red' : 'green';
 
-            return (
-              <tr key={h.id}>
-               <td>
-  <label className="custom-checkbox">
-    <input
-      type="checkbox"
-      checked={h.selected}
-      onChange={() => toggleSelection(h.id)}
-    />
-    <span className="checkmark" />
-  </label>
-</td>
-                <td>
-                  <div className="asset-name">{h.asset}</div>
-                  <div className="subtext">{h.ticker}</div>
-                </td>
-                <td>
-                  {h.amount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {h.ticker}
-                  <br />
-                  <span className="subtext">
-                    ${h.avgBuyPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}/{h.ticker}
-                  </span>
-                </td>
-                <td>${h.currentPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
-                <td className={shortTermClass}>
-                  <div className="tooltip-container">
-  {formatAbbreviatedCurrency(shortTermValue)}
-  <div className="tooltip-box">
-    {shortTermValue.toLocaleString(undefined, {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 2,
-    })}
-  </div>
-</div>
-<br />
-<span className="subtext">
-  {h.shortTerm.toLocaleString(undefined, { maximumFractionDigits: 2 })} {h.ticker}
-</span>
+    return (
+      <tr key={h.id}>
+        <td data-label="">
+          <label className="custom-checkbox">
+            <input
+              type="checkbox"
+              checked={h.selected}
+              onChange={() => toggleSelection(h.id)}
+            />
+            <span className="checkmark" />
+          </label>
+        </td>
+        <td data-label="Asset">
+          <div className="asset-name">{h.asset}</div>
+          <div className="subtext">{h.ticker}</div>
+        </td>
+        <td data-label="Holdings">
+          {h.amount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {h.ticker}
+          <br />
+          <span className="subtext">
+            ${h.avgBuyPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}/{h.ticker}
+          </span>
+        </td>
+        <td data-label="Current Price">
+          ${h.currentPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+        </td>
+        <td data-label="Short-Term" className={shortTermClass}>
+          <div className="tooltip-container">
+            {formatAbbreviatedCurrency(shortTermValue)}
+            <div className="tooltip-box">
+              {shortTermValue.toLocaleString(undefined, {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2,
+              })}
+            </div>
+          </div>
+          <br />
+          <span className="subtext">
+            {h.shortTerm.toLocaleString(undefined, { maximumFractionDigits: 2 })} {h.ticker}
+          </span>
+        </td>
+        <td data-label="Long-Term">
+          $0.00<br />
+          <span className="subtext">{h.longTerm} {h.ticker}</span>
+        </td>
+        <td data-label="Amount to Sell">
+          {h.selected
+            ? `${h.amount.toLocaleString(undefined, {
+                maximumFractionDigits: 2,
+              })} ${h.ticker}`
+            : '-'}
+        </td>
+      </tr>
+    );
+  })}
+</tbody>
 
-                </td>
-                <td>
-                  $0.00<br />
-                  <span className="subtext">{h.longTerm} {h.ticker}</span>
-                </td>
-                <td>
-  {h.selected ? (
-    <>
-      {h.amount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {h.ticker}
-    </>
-  ) : (
-    '-'
-  )}
-</td>
-              </tr>
-            );
-          })}
-        </tbody>
       </table>
 <div className="view-toggle">
   <button className="view-toggle-link" onClick={() => setShowAll(!showAll)}>

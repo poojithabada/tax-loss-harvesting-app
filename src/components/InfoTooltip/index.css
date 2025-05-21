@@ -4,11 +4,14 @@
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   padding: 1rem;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   font-size: 0.9rem;
   position: relative;
+  box-sizing: border-box;
 }
 
+/* Tooltip arrow */
 .info-tooltip::before {
   content: '';
   position: absolute;
@@ -37,4 +40,20 @@
 
 .info-tooltip p strong {
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .info-tooltip {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    max-width: 90vw;
+  }
+
+  .info-tooltip::before {
+    border-width: 0 8px 8px 8px;
+  }
+
+  .info-tooltip ul {
+    padding-left: 1rem;
+  }
 }

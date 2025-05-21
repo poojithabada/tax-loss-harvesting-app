@@ -171,3 +171,82 @@ td {
   font-weight: 500;
   padding: 0;
 }
+@media (max-width: 1024px) {
+  .holdings-table {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  .custom-checkbox,
+  .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  .asset-header-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .tooltip-box {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .holdings-table {
+    overflow-x: auto;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    border-bottom: 1px solid #2c2c3a;
+    padding: 10px 0;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    flex: 1;
+    color: gray;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  td > *:not(.subtext) {
+    flex: 1;
+    text-align: right;
+  }
+
+  .view-toggle {
+    text-align: center;
+  }
+
+  .view-toggle-link {
+    font-size: 14px;
+  }
+}

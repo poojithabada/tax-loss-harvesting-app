@@ -8,18 +8,20 @@
   gap: 20px;
   justify-content: space-between;
   margin-top: 20px;
- margin-bottom: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .card {
   flex: 1;
+  min-width: 280px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card.dark {
-  background-color:  #1a1a24;
+  background-color: #1a1a24;
   color: white;
 }
 
@@ -65,6 +67,7 @@
   background-color: rgba(0, 255, 200, 0.1);
   cursor: pointer;
 }
+
 .metrics-table,
 .metrics-table th,
 .metrics-table td {
@@ -78,4 +81,59 @@
 
 .metrics-table td {
   padding: 6px 12px;
+}
+
+.gain-info {
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .capital-gain {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    font-size: 1.1rem;
+  }
+
+  .metrics-table td,
+  .metrics-table th {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .metrics-table td,
+  .metrics-table th {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .capital-gain {
+    font-size: 0.95rem;
+  }
+
+  .highlight {
+    font-size: 1rem;
+  }
 }

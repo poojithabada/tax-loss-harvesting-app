@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -35,8 +36,49 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  max-width: 300px;
 }
 
 .tooltip-wrapper:hover .tooltip-hover-area {
   display: block;
+}
+
+@media (max-width: 768px) {
+  .title-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .how-it-works-text {
+    font-size: 0.95rem;
+  }
+
+  .tooltip-hover-area {
+    top: 110%;
+    left: 0;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .how-it-works-text {
+    font-size: 0.9rem;
+  }
+
+  .tooltip-hover-area {
+    max-width: 250px;
+  }
 }
