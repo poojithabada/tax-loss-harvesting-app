@@ -2,7 +2,7 @@
   "name": "tax-loss-harvesting-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://poojithabada.github.io/tax-loss-harvesting-app/",
+  "homepage": "https://poojithabada.github.io/tax-loss-harvesting-app",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
