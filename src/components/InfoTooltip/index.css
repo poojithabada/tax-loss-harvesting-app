@@ -1,0 +1,40 @@
+.info-tooltip {
+  background-color: white;
+  color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 320px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.info-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.info-tooltip ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.info-tooltip li {
+  margin-bottom: 8px;
+}
+
+.info-tooltip p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.info-tooltip p strong {
+  font-weight: 600;
+}

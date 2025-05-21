@@ -1,0 +1,173 @@
+.holdings-table {
+  background-color: #1a1a24;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #aab1c5;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #3a82f7; 
+  border-color: #3a82f7;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.asset-header-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-color: #3a82f7;
+  border-radius: 4px;
+  position: relative;
+}
+
+.asset-header-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 2px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  
+}
+
+.tooltip-box {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.8rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tooltip-container:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+
+thead th {
+  text-align: left;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+thead th.sortable {
+  cursor: pointer;
+  
+}
+
+td {
+  padding: 12px 0;
+  border-top: 1px solid #2c2c3a;
+  font-size: 0.9rem;
+}
+
+.subtext {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.green {
+  color: #25d366;
+}
+
+.red {
+  color: #ff4d4f;
+}
+
+.asset-name {
+  font-weight: 600;
+}
+
+.view-all {
+  margin-top: 12px;
+  text-align: left;
+  cursor: pointer;
+  color: #3b82f6;
+  font-weight: 500;
+}
+.view-toggle {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.view-toggle-link {
+  background: none;
+  border: none;
+  color: #3a82f7;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+}
